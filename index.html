@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stone Paper Scissor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎮 Stone Paper Scissor</h1>
+
+    <form method="POST">
+
+        <button name="choice" value="stone">🪨 Stone</button>
+
+        <button name="choice" value="paper">📄 Paper</button>
+
+        <button name="choice" value="scissor">✂️ Scissor</button>
+
+    </form>
+
+    <div class="result">
+        <h2>{{ result }}</h2>
+
+        <p>🧑 You: {{ player }}</p>
+
+        <p>🤖 Robot: {{ robot }}</p>
+    </div>
+
+    <div class="scoreboard">
+
+        <h2>🏆 Score Board</h2>
+
+        <p>Player: {{ player_score }}</p>
+
+        <p>Robot: {{ robot_score }}</p>
+
+    </div>
+
+    <h2>{{ winner }}</h2>
+
+</div>
+
+</body>
+</html>
